@@ -1,16 +1,19 @@
 package ar.edu.unc.famaf.redditreader.model;
 
 
+import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class PostModel {
+public class PostModel implements Serializable{
 
     private String title;
     private String author;
     private String date;
     private long comments;
     private String urlString;
+    private String subreddit;
+    private String webLink;
 
     public String getTitle() {
         return title;
@@ -51,4 +54,12 @@ public class PostModel {
     public void setUrlString(String urlString) {
         this.urlString = urlString;
     }
+
+    public String getSubreddit() { return subreddit; }
+
+    public void setSubreddit(String subreddit) { this.subreddit = subreddit; }
+
+    public String getWebLink() { return webLink; }
+
+    public void setWebLink(String webLink) { this.webLink = webLink; }
 }

@@ -39,6 +39,8 @@ public class GetTopPostsTask extends AsyncTask<RedditDBHelper, Void, List<PostMo
                     values.put(dbreddit.POST_TABLE_DATE, listing.getChildren().get(i).getDate());
                     values.put(dbreddit.POST_TABLE_COMMENTS, listing.getChildren().get(i).getComments());
                     values.put(dbreddit.POST_TABLE_URLSTRING, listing.getChildren().get(i).getUrlString());
+                    values.put(dbreddit.POST_TABLE_SUBREDDIT, listing.getChildren().get(i).getSubreddit());
+                    values.put(dbreddit.POST_TABLE_WEBLINK, listing.getChildren().get(i).getWebLink());
                     long insertId = db.insert(dbreddit.POST_TABLE, null, values);
 
                 }

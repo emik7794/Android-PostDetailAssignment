@@ -14,14 +14,5 @@
         android:id="@+id/postsLV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></ListView>
-<!--
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No user logged yet"
-        android:id="@+id/loginStatusTextView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
 
--->
 </RelativeLayout>

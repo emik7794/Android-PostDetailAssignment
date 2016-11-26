@@ -58,6 +58,8 @@ public class Backend {
                 postModel.setDate(cursor.getString(3));
                 postModel.setComments(cursor.getLong(4));
                 postModel.setUrlString(cursor.getString(5));
+                postModel.setSubreddit(cursor.getString(6));
+                postModel.setWebLink(cursor.getString(7));
                 postModelList.add(postModel);
 
             } while (cursor.moveToNext());
@@ -70,7 +72,7 @@ public class Backend {
     }
 
 
-    private boolean isNetworkAvailable(Context context) {
+    public boolean isNetworkAvailable(Context context) {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();

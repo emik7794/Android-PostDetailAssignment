@@ -18,6 +18,8 @@ public class RedditDBHelper extends SQLiteOpenHelper {
     public static final String POST_TABLE_COMMENTS= "comments";
     public static final String POST_TABLE_URLSTRING = "urlString";
     public static final String POST_TABLE_BYTESPREVIEWIMAGE = "bytesPreviewImage";
+    public static final String POST_TABLE_SUBREDDIT = "subreddit";
+    public static final String POST_TABLE_WEBLINK = "webLink";
 
 
     public RedditDBHelper(Context context) {
@@ -33,7 +35,9 @@ public class RedditDBHelper extends SQLiteOpenHelper {
                 + POST_TABLE_DATE + " text,"
                 + POST_TABLE_COMMENTS + " text,"
                 + POST_TABLE_URLSTRING + " text,"
-                + POST_TABLE_BYTESPREVIEWIMAGE + " blob"
+                + POST_TABLE_BYTESPREVIEWIMAGE + " blob,"
+                + POST_TABLE_SUBREDDIT + " text,"
+                + POST_TABLE_WEBLINK + " text"
                 + " );";
         sqLiteDatabase.execSQL(createSentence);
 

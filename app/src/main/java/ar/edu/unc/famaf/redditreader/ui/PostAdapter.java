@@ -153,6 +153,7 @@ public class PostAdapter extends ArrayAdapter<PostModel> {
         public final ImageView asyncPreviewIV;
         public final ProgressBar progressBar;
 
+
         public ViewHolder(TextView titleTV, TextView authorTV, TextView commentsTV,
                           TextView dateTV, ImageView asyncPreviewIV, ProgressBar progressBar) {
 

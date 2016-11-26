@@ -107,6 +107,8 @@ public class Parser {
         long date_ms = -1;
         SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
         String date = null;
+        String subreddit = null;
+        String webLink = null;
 
 
         while (reader.hasNext()) {
@@ -126,8 +128,11 @@ public class Parser {
                 dateFormat.getTimeZone().getOffset(date_ms);
                 dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
                 date = dateFormat.format(date_ms);
-            }
-            else {
+            } else if (name.equals("subreddit")) {
+                subreddit = reader.nextString();
+            } else if (name.equals("url") && jsonToken != JsonToken.NULL) {
+                webLink = reader.nextString();
+            } else {
                 reader.skipValue();
             }
         }
@@ -137,6 +142,8 @@ public class Parser {
         postModel.setComments(num_comments);
         postModel.setUrlString(thumbnail);
         postModel.setDate(date);
+        postModel.setSubreddit(subreddit);
+        postModel.setWebLink(webLink);
 
         return  postModel;
     }
