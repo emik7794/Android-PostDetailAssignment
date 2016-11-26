@@ -3,6 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    TextView dateTV = (TextView) findViewById(R.id.postDetailDate);
+    TextView titleTV = (TextView) findViewById(R.id.postDetailTitle);
+    TextView authorTV = (TextView) findViewById(R.id.postDetailAuthor);
+    TextView webLinkTV = (TextView) findViewById(R.id.postDetailWebLink);
+
+
     // PREVIEW
     <ImageView
         android:layout_width="90dp"
@@ -24,13 +30,13 @@
         android:layout_toEndOf="@+id/postDetailPreview"
         android:id="@+id/postDetailTitle" />
 
-    // AUTHOR
+    // SUBREDDIT
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text=""
-        android:id="@+id/postDetailAuthor"
+        android:id="@+id/postDetailSubreddit"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/postDetailPreview"
         android:layout_toEndOf="@+id/postDetailPreview" />
@@ -43,29 +49,26 @@
         android:layout_marginLeft="30dp"
         android:id="@+id/postDetailDate"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/postDetailAuthor" />
-
-    // SUBREDDIT
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_marginLeft="30dp"
-        android:text="SUBREDDITTTTT"
-        android:id="@+id/postDetailSubreddit"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/postDetailAuthor" />
+        android:layout_toRightOf="@+id/postDetailSubreddit" />
 
     // WEBLINK
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_marginLeft="30dp"
-        android:text="WEBLINNNNKKKKKKKK"
         android:id="@+id/postDetailWebLink"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/postDetailAuthor" />
+        android:layout_toEndOf="@+id/postDetailPreview"
+        android:layout_below="@+id/postDetailAuthor"
+        android:layout_toRightOf="@+id/postDetailPreview" />
 
+    // AUTHOR
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/postDetailAuthor"
+        android:layout_below="@+id/postDetailTitle"
+        android:layout_toRightOf="@+id/postDetailPreview"
+        android:layout_toEndOf="@+id/postDetailPreview" />
 
 </RelativeLayout>

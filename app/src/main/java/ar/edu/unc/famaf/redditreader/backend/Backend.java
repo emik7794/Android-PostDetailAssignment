@@ -58,8 +58,9 @@ public class Backend {
                 postModel.setDate(cursor.getString(3));
                 postModel.setComments(cursor.getLong(4));
                 postModel.setUrlString(cursor.getString(5));
-                postModel.setSubreddit(cursor.getString(6));
-                postModel.setWebLink(cursor.getString(7));
+                // La posicion 6 corresponde a POST_TABLE_BYTESPREVIEWIMAGE
+                postModel.setSubreddit(cursor.getString(7));
+                postModel.setWebLink(cursor.getString(8));
                 postModelList.add(postModel);
 
             } while (cursor.moveToNext());

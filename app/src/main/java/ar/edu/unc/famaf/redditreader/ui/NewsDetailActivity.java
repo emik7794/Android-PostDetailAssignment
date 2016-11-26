@@ -40,7 +40,7 @@ public class NewsDetailActivity extends AppCompatActivity {
         dateTV.setText(date);
         titleTV.setText(title);
         authorTV.setText("by " + author);
-        webLinkTV.setText(webLink);
+        webLinkTV.setText("Sitio Web: " + webLink);
 
         Bitmap bitmap = new PreviewImageDBHelper(this).getImage(urlPreview);
 
